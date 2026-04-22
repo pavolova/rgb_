@@ -113,14 +113,13 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 
 <img width="1000" height="550" alt="controller" src="https://github.com/user-attachments/assets/55c97bd9-98d5-4caf-b76f-87370df22e1f" />
 
-rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd
-
-
 ###  SMOOTHING <br>
 
 Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prechody mezi farbami RGB mood lampy. Zabraňuje rušivým skokovým zmenám jasu tým, že postupne aproximuje aktuálnu hodnotu k hodnote cieľovej. Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály pre všetky tri farebné zložky súčasne, čím zaisťuje plynulé miešanie výsledného farebného spektra.
 
 <img width="1000" height="550" alt="smoothing" src="https://github.com/user-attachments/assets/66c98408-0b2b-40e0-a797-1715cbbfb513" />
+
+[Smoothing Test Bench](https://github.com/pavolova/rgb_mood_lamp/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd)
 
 ### PWM <br>
 
