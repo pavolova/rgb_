@@ -113,6 +113,8 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 
 <img width="1000" height="550" alt="controller" src="https://github.com/user-attachments/assets/55c97bd9-98d5-4caf-b76f-87370df22e1f" />
 
+rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd
+
 
 ###  SMOOTHING <br>
 
