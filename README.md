@@ -100,7 +100,7 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 
 <img width="1000" height="450" alt="debounce" src="https://github.com/user-attachments/assets/bbbc1424-7847-4a83-a9ad-2ae9bbd1a1e7" />
 
-[Debounce Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/deboounce_tb.vhd)
+[Debounce Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd)
 
 ### CLOCK ENABLE <br>
 
