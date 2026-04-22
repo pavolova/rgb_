@@ -100,18 +100,10 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 Modul úspešne identifikuje a odstraňuje krátke zákmity napríklad v signáli btnc_in, pričom na výstup btnc_state prepúšťa len stabilné stlačenia bez šumu.
 Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály z viacerých tlačidiel súčasne, čím zaisťuje stabilné ovládanie rôznych funkcií systému.
 
-<img width="1000" height="450" alt="debounce" src="https://github.com/user-attachments/assets/bbbc1424-7847-4a83-a9ad-2ae9bbd1a1e7" />
+<img width="1006" height="283" alt="image" src="https://github.com/user-attachments/assets/4c44e500-0d43-4773-8843-4037859816a2" />
+
 
 [Debounce Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd)
-
-### CLOCK ENABLE <br>
-
-Zabezpečuje, aby nadväzujúce bloky nepracovali na plnej rýchlosti hlavných hodín, ale v dlhších, presne definovaných intervaloch. Modul čaká na uvoľnenie resetu, a potom v pravidelných intervaloch "prepúšťa" jeden hodinový impulz do signálu enable, čím efektívne spomaľuje činnosť nadväzujúcej logiky.
-
-<img width="1000" height="550" alt="clk_en" src="https://github.com/user-attachments/assets/a6d04ff4-d67c-433b-a6a2-8938de2f46af" />
-
-[Clock enable Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/clk_en_tb.vhd)
-
 
 ### CONTROLLER <br>
 
