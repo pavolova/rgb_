@@ -127,6 +127,8 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 
 <img width="1000" height="550" alt="pwm2" src="https://github.com/user-attachments/assets/53dd987c-4ab6-4c6f-b533-790072845f61" />
 
+[PWM Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/PWM_tb.vhd)
+
 ### RGB MOOD LAMP  <br>
 
 Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simulácia nám ukázala, že tento modul úspešne koordinuje prácu všetkých vnútorných blokov naraz. Vďaka tomu lampa okamžite reaguje na stlačenie tlačidla a dokáže plynule meniť farby a jas.
