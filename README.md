@@ -119,7 +119,7 @@ Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prec
 
 <img width="1000" height="550" alt="smoothing" src="https://github.com/user-attachments/assets/66c98408-0b2b-40e0-a797-1715cbbfb513" />
 
-[Smoothing Test Bench](https://github.com/pavolova/rgb_mood_lamp/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd)
+[Smoothing Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd)
 
 ### PWM <br>
 
