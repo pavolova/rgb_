@@ -100,11 +100,15 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 
 <img width="1000" height="450" alt="debounce" src="https://github.com/user-attachments/assets/bbbc1424-7847-4a83-a9ad-2ae9bbd1a1e7" />
 
+[Debounce Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/deboounce_tb.vhd)
+
 ### CLOCK ENABLE <br>
 
 Zabezpečuje, aby nadväzujúce bloky nepracovali na plnej rýchlosti hlavných hodín, ale v dlhších, presne definovaných intervaloch. Modul čaká na uvoľnenie resetu, a potom v pravidelných intervaloch "prepúšťa" jeden hodinový impulz do signálu enable, čím efektívne spomaľuje činnosť nadväzujúcej logiky.
 
 <img width="1000" height="550" alt="clk_en" src="https://github.com/user-attachments/assets/a6d04ff4-d67c-433b-a6a2-8938de2f46af" />
+
+[Clock enable Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/clk_en_tb.vhd)
 
 
 ### CONTROLLER <br>
@@ -112,6 +116,8 @@ Zabezpečuje, aby nadväzujúce bloky nepracovali na plnej rýchlosti hlavných 
 Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vstupov generuje cieľové hodnoty pre jednotlivé farebné zložky RGB mood lampy. Blok spracováva požiadavky na zmenu módu, jasu a rýchlosti efektov. Simulačné priebehy zobrazujú schopnosť bloku prepínať medzi definovanými farbami (Red, Green, Blue, Yellow, Cyan, Magenta) a plynule prechádzať do automatického módu, pričom je zachovaná presná synchronizácia všetkých troch farebných kanálov.
 
 <img width="1000" height="550" alt="controller" src="https://github.com/user-attachments/assets/55c97bd9-98d5-4caf-b76f-87370df22e1f" />
+
+[Controller Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/controller_tb.vhd)
 
 ###  SMOOTHING <br>
 
@@ -127,10 +133,13 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 
 <img width="1000" height="550" alt="pwm2" src="https://github.com/user-attachments/assets/53dd987c-4ab6-4c6f-b533-790072845f61" />
 
-[PWM Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/PWM_tb.vhd)
+[PWM Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/pwm_tb.vhd)
 
 ### RGB MOOD LAMP  <br>
 
 Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simulácia nám ukázala, že tento modul úspešne koordinuje prácu všetkých vnútorných blokov naraz. Vďaka tomu lampa okamžite reaguje na stlačenie tlačidla a dokáže plynule meniť farby a jas.
 
 <img width="1000" height="550" alt="top_level" src="https://github.com/user-attachments/assets/4705b20f-2895-47dd-b08b-278fa5f2971b" />
+
+[RGM MOOD LAMP Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd)
+
