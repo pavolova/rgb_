@@ -1,0 +1,14 @@
+*.log
+*.jou
+*.str
+.Xil/
+*.pb
+*.dir/
+
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+
+.DS_Store
+Thumbs.db
