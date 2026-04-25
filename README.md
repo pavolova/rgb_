@@ -105,8 +105,7 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 
 Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vstupov generuje cieľové hodnoty pre jednotlivé farebné zložky RGB mood lampy. Blok spracováva požiadavky na zmenu módu, jasu a rýchlosti efektov. Simulačné priebehy zobrazujú schopnosť bloku prepínať medzi definovanými farbami (Red, Green, Blue, Yellow, Cyan, Magenta) a plynule prechádzať do automatického módu, pričom je zachovaná presná synchronizácia všetkých troch farebných kanálov.
 
-<img width="1261" height="608" alt="controller-opravene " src="https://github.com/user-attachments/assets/0ab6a67e-ee37-447e-8303-1240a71895af" />
-
+<img width="1167" height="695" alt="controller-opravene " src="https://github.com/user-attachments/assets/608a3e7e-e924-402a-abb2-38a9f0d42b54" />
 
 [Controller Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/controller_tb.vhd)
 
