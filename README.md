@@ -31,7 +31,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 | LED16_b | out | std_logic | Blue LED output |
 
 
-### debounce <br>
+### DEBOUNCE <br>
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -44,7 +44,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 | btnu_state | out | std_logic | Debounced state of up button |
 | btnd_state | out | std_logic | Debounced state of down button |
 
-### clk_en <br>
+### CLK_EN <br>
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -52,7 +52,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 | rst | in | std_logic | High-active synchronous reset |
 | en | out | std_logic | One-clock-cycle enable pulse |
 
-### controller <br>
+### CONTROLLER <br>
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -66,7 +66,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 | target_g | out | std_logic_vector(7 downto 0) | Target value for green component |
 | target_b | out | std_logic_vector(7 downto 0) | Target value for blue component |
 
-### smoothing <br>
+### SMOOTHING <br>
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
