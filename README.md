@@ -100,7 +100,7 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 
 <br>
 
-[![Debounce](https://img.shields.io/badge/Debounce-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd)
+Teste Bench: [![Debounce](https://img.shields.io/badge/Debounce-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd)
 
 [Debounce Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd)
 
