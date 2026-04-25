@@ -98,7 +98,8 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 Modul úspešne identifikuje a odstraňuje krátke zákmity napríklad v signáli btnc_in, pričom na výstup btnc_state prepúšťa len stabilné stlačenia bez šumu.
 Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály z viacerých tlačidiel súčasne, čím zaisťuje stabilné ovládanie rôznych funkcií systému.
 
-<img width="1006" height="283" alt="image" src="https://github.com/user-attachments/assets/4c44e500-0d43-4773-8843-4037859816a2" />
+<img width="1252" height="700" alt="debounce-opravene" src="https://github.com/user-attachments/assets/0a643eaa-0bc1-4240-b58b-00dc867929b0" />
+
 
 <br>
 
