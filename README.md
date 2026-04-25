@@ -105,7 +105,8 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 
 Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vstupov generuje cieľové hodnoty pre jednotlivé farebné zložky RGB mood lampy. Blok spracováva požiadavky na zmenu módu, jasu a rýchlosti efektov. Simulačné priebehy zobrazujú schopnosť bloku prepínať medzi definovanými farbami (Red, Green, Blue, Yellow, Cyan, Magenta) a plynule prechádzať do automatického módu, pričom je zachovaná presná synchronizácia všetkých troch farebných kanálov.
 
-<img width="1000" height="550" alt="controller" src="https://github.com/user-attachments/assets/55c97bd9-98d5-4caf-b76f-87370df22e1f" />
+<img width="1261" height="608" alt="controller-opravene " src="https://github.com/user-attachments/assets/0ab6a67e-ee37-447e-8303-1240a71895af" />
+
 
 [Controller Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/controller_tb.vhd)
 
@@ -113,7 +114,8 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 
 Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prechody mezi farbami RGB mood lampy. Zabraňuje rušivým skokovým zmenám jasu tým, že postupne aproximuje aktuálnu hodnotu k hodnote cieľovej. Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály pre všetky tri farebné zložky súčasne, čím zaisťuje plynulé miešanie výsledného farebného spektra.
 
-<img width="1000" height="550" alt="smoothing" src="https://github.com/user-attachments/assets/66c98408-0b2b-40e0-a797-1715cbbfb513" />
+<img width="1159" height="697" alt="smoothing-opravene" src="https://github.com/user-attachments/assets/1e3246fe-6c09-4880-80e5-78ae4f1e4cef" />
+
 
 [Smoothing Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd)
 
@@ -121,7 +123,7 @@ Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prec
 
 PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitálnu hodnotu jasu na časovo modulovaný výstupný signál. Spravuje šírku impulzu na výstupe pwm_out v rámci každej periódy na základe porovnávania vnútorného čítača so vstupnou hodnotou duty_cycle. Z výsledkov simulácie vidíme, že modul stíha ovládať všetky tri farby (červenú, zelenú aj modrú) naraz a nezávisle od seba. Vďaka tomu, že toto prepínanie prebieha obrovskou rýchlosťou, oko nevidí žiadne blikanie, ale len namiešanú a stabilnú farbu.
 
-<img width="1000" height="550" alt="pwm2" src="https://github.com/user-attachments/assets/53dd987c-4ab6-4c6f-b533-790072845f61" />
+<img width="1251" height="698" alt="pwm-opravene " src="https://github.com/user-attachments/assets/891e7a4b-9d13-4946-8f4b-9bc9734cea11" />
 
 [PWM Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/pwm_tb.vhd)
 
@@ -129,7 +131,8 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 
 Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simulácia nám ukázala, že tento modul úspešne koordinuje prácu všetkých vnútorných blokov naraz. Vďaka tomu lampa okamžite reaguje na stlačenie tlačidla a dokáže plynule meniť farby a jas.
 
-<img width="1000" height="550" alt="top_level" src="https://github.com/user-attachments/assets/4705b20f-2895-47dd-b08b-278fa5f2971b" />
+<img width="1515" height="699" alt="top_level-opravene" src="https://github.com/user-attachments/assets/82640408-806b-4482-9ac5-f71486c0599b" />
+
 
 [RGM MOOD LAMP Test Bench](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd)
 
