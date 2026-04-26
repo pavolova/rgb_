@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity clk_en is
  generic (
-        N_PERIODS : positive := 200000  
+        N_PERIODS : positive := 100000  
   );
     Port ( clk : in STD_LOGIC;
            btnl : in STD_LOGIC;
@@ -11,7 +11,7 @@ entity clk_en is
 end clk_en;
 
 architecture Behavioral of clk_en is
-    signal sig_count : integer range 0 to N_PERIODS - 1;
+    signal sig_count : integer range 0 to N_PERIODS - 1 := 0;
 begin
 
     p_clk_enable : process (clk) is
@@ -30,6 +30,6 @@ begin
 
     end process p_clk_enable;
 
-    en <= '1' when (sig_count = N_PERIODS - 1) else
-             '0';
+    en <= '1' when (sig_count = N_PERIODS - 1) 
+    else '0';
 end Behavioral;

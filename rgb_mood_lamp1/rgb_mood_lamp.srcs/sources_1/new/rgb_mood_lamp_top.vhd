@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity rgb_mood_lamp_top is
     Port ( clk : in STD_LOGIC;
@@ -13,7 +14,8 @@ entity rgb_mood_lamp_top is
 end rgb_mood_lamp_top;
 
 architecture Behavioral of rgb_mood_lamp_top is
-
+        
+     
     -- Component declaration for clock enable
     component clk_en is
         generic ( N_PERIODS : integer );
@@ -69,7 +71,7 @@ architecture Behavioral of rgb_mood_lamp_top is
     end component;
     
      -- Component declaration for PWM
-    component PWM is
+    component pwm is
         port (
             clk   : in    std_logic;
             btnl   : in    std_logic;
@@ -79,21 +81,32 @@ architecture Behavioral of rgb_mood_lamp_top is
     end component;
 
     signal sig_en : std_logic;
-    signal sig_mode : std_logic;
-    signal sig_bright : std_logic;
-    signal sig_speed : std_logic;
-    signal sig_target_r   : std_logic_vector(7 downto 0);
-    signal sig_target_g   : std_logic_vector(7 downto 0);
-    signal sig_target_b   : std_logic_vector(7 downto 0);
-    signal sig_current_r  : std_logic_vector(7 downto 0);
-    signal sig_current_g  : std_logic_vector(7 downto 0);
-    signal sig_current_b  : std_logic_vector(7 downto 0);
+
+    signal btnc_db : std_logic;
+    signal btnu_db : std_logic;
+    signal btnd_db : std_logic;
+
+    signal btnc_prev : std_logic := '0';
+    signal btnu_prev : std_logic := '0';
+    signal btnd_prev : std_logic := '0';
+
+    signal sig_mode   : std_logic_vector(2 downto 0) := "111";
+    signal sig_bright : std_logic_vector(7 downto 0) := x"FF";
+    signal sig_speed  : std_logic_vector(7 downto 0) := x"05";
+
+    signal sig_target_r  : std_logic_vector(7 downto 0);
+    signal sig_target_g  : std_logic_vector(7 downto 0);
+    signal sig_target_b  : std_logic_vector(7 downto 0);
+
+    signal sig_current_r : std_logic_vector(7 downto 0);
+    signal sig_current_g : std_logic_vector(7 downto 0);
+    signal sig_current_b : std_logic_vector(7 downto 0);
     
 begin
 
-    -- Component instantiation of clock enable for 2 ms
+    -- Component instantiation of clock enable for 1 ms with 100 MHz clock
     clk_en_ins : clk_en
-        generic map ( N_PERIODS => 100 )
+        generic map ( N_PERIODS => 100000 )
         port map (
             clk   => clk,
             btnl   => btnl,
@@ -108,10 +121,64 @@ begin
             btnc_in => btnc, 
             btnu_in => btnu, 
             btnd_in => btnd,
-            btnc_state => sig_mode, 
-            btnu_state => sig_bright, 
-            btnd_state => sig_speed
+            btnc_state => btnc_db, 
+            btnu_state => btnu_db, 
+            btnd_state => btnd_db
         );
+        
+        process(clk)
+    begin
+        if rising_edge(clk) then
+            if btnl = '1' then
+                sig_mode   <= "111";
+                sig_bright <= x"FF";
+                sig_speed  <= x"05";
+
+                btnc_prev <= '0';
+                btnu_prev <= '0';
+                btnd_prev <= '0';
+
+            else
+                btnc_prev <= btnc_db;
+                btnu_prev <= btnu_db;
+                btnd_prev <= btnd_db;
+
+                -- BTN C: prepína režim 0 až 7
+                if btnc_db = '1' and btnc_prev = '0' then
+                    sig_mode <= std_logic_vector(unsigned(sig_mode) + 1);
+                end if;
+
+                -- BTN U: prepína jas
+                if btnu_db = '1' and btnu_prev = '0' then
+                    case sig_bright is
+                        when x"40" =>
+                            sig_bright <= x"80";
+                        when x"80" =>
+                            sig_bright <= x"C0";
+                        when x"C0" =>
+                            sig_bright <= x"FF";
+                        when others =>
+                            sig_bright <= x"40";
+                    end case;
+                end if;
+
+                -- BTN D: prepína rýchlosť
+                if btnd_db = '1' and btnd_prev = '0' then
+                    case sig_speed is
+                        when x"01" =>
+                            sig_speed <= x"03";
+                        when x"03" =>
+                            sig_speed <= x"05";
+                        when x"05" =>
+                            sig_speed <= x"0A";
+                        when others =>
+                            sig_speed <= x"01";
+                    end case;
+                end if;
+
+            end if;
+        end if;
+    end process;
 
     -- Component instantiation of button controller
     controller_inst : controller
@@ -119,9 +186,9 @@ begin
             clk => clk, 
             btnl => btnl,
             ce => sig_en,
-            mode => "111", 
-            bright => x"FF",
-            speed => x"05",
+            mode => sig_mode, 
+            bright => sig_bright,
+            speed => sig_speed,
             target_r => sig_target_r,
             target_g => sig_target_g,
             target_b => sig_target_b

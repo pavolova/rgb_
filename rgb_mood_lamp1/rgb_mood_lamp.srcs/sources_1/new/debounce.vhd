@@ -17,7 +17,7 @@ end debounce;
 architecture Behavioral of debounce is
     
     constant C_SHIFT_LEN : positive := 4;
-    constant C_MAX       : positive := 10;
+    constant C_MAX       : positive := 250_000;
 
     component clk_en is
         generic ( N_PERIODS : positive );

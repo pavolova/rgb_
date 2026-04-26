@@ -56,32 +56,80 @@ begin
     stimuli : process
     begin
         -- ***EDIT*** Adapt initialization as needed
+        btnl <= '1';
         btnc_in <= '0';
         btnu_in <= '0';
         btnd_in <= '0';
-
-        -- Reset generation
-        -- ***EDIT*** Check that rst is really your reset signal
-        btnl <= '1';
-        wait for 100 ns;
-        btnl <= '0';
         wait for 100 ns;
         
+        -- Reset generation
+        -- ***EDIT*** Check that rst is really your reset signal
+        -- počiatočný stav
+        btnl <= '0';
+        wait for 1 us;
+
+    
+        -- BTNC
+        btnc_in <= '1'; wait for 1 us;
+        btnc_in <= '0'; wait for 800 ns;
+        btnc_in <= '1'; wait for 1 us;
+        btnc_in <= '0'; wait for 700 ns;
+        btnc_in <= '1'; wait for 900 ns;
+        btnc_in <= '0'; wait for 600 ns;
+    
         btnc_in <= '1';
-        wait for 5 us;
+        wait for 50 us;
+    
+        btnc_in <= '0'; wait for 1 us;
+        btnc_in <= '1'; wait for 800 ns;
+        btnc_in <= '0'; wait for 1 us;
+        btnc_in <= '1'; wait for 700 ns;
+        btnc_in <= '0'; wait for 900 ns;
+    
         btnc_in <= '0';
-        wait for 2 us;
+        wait for 20 us;
+    
+        -- BTNU
+        btnu_in <= '1'; wait for 1 us;
+        btnu_in <= '0'; wait for 800 ns;
+        btnu_in <= '1'; wait for 1 us;
+        btnu_in <= '0'; wait for 700 ns;
+        btnu_in <= '1'; wait for 900 ns;
+        btnu_in <= '0'; wait for 600 ns;
     
         btnu_in <= '1';
-        wait for 5 us;
+        wait for 50 us;
+    
+        btnu_in <= '0'; wait for 1 us;
+        btnu_in <= '1'; wait for 800 ns;
+        btnu_in <= '0'; wait for 1 us;
+        btnu_in <= '1'; wait for 700 ns;
+        btnu_in <= '0'; wait for 900 ns;
+    
         btnu_in <= '0';
-        wait for 2 us;
+        wait for 20 us;
+    
+        -- BTND
+        btnd_in <= '1'; wait for 1 us;
+        btnd_in <= '0'; wait for 800 ns;
+        btnd_in <= '1'; wait for 1 us;
+        btnd_in <= '0'; wait for 700 ns;
+        btnd_in <= '1'; wait for 900 ns;
+        btnd_in <= '0'; wait for 600 ns;
     
         btnd_in <= '1';
-        wait for 5 us;
+        wait for 50 us;
+    
+        btnd_in <= '0'; wait for 1 us;
+        btnd_in <= '1'; wait for 800 ns;
+        btnd_in <= '0'; wait for 1 us;
+        btnd_in <= '1'; wait for 700 ns;
+        btnd_in <= '0'; wait for 900 ns;
+    
         btnd_in <= '0';
-        wait for 2 us;
+        wait for 20 us;
 
+    
         -- ***EDIT*** Add stimuli here
         wait for 200 * TbPeriod;
 
