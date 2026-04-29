@@ -3,7 +3,7 @@
 Miroslav Kaštier (272835) <br>
 Viktória Pavolová (270987)
 ## Abstrakt
-Projekt RGB Mood Lamp umožňuje meniť farby, jas a rýchlosť prechodu medzi farbami. Projekt je realizovaný pomocou 8 módov (červená, zelená, modrá, žltá, cyan, fialová, autofade a OFF - možnosť vypnutia farby. Ďalším prvkom je resetovacie tlačítko, ktoré vráti zmeny do pôvodného stavu. Kód je písaný v jazyku VHDL a implementovaný na dosku Nexys A7-50T.
+Pomocou RGB Mood Lamp dokážeme meniť farby, jas a rýchlosť prechodu medzi farbami. Projekt je realizovaný pomocou 8 módov (červená, zelená, modrá, žltá, cyan, fialová, autofade a OFF - možnosť vypnutia farby). Ďalším prvkom je resetovacie tlačítko. Kód je písaný v jazyku VHDL a implementovaný na dosku Nexys A7-50T.
 ### Hlavný cieľ
 Navrhnúť a implementovať RGB Mood Lamp na FPGA (Nexys A7-50T), ktorá umožňuje:
 - plynulé prechody medzi farbami
