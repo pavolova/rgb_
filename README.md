@@ -30,7 +30,8 @@ Inicializácia git + Vivado, Úprava README.md, editácia demo videa, programova
 | en | out | std_logic | One-clock-cycle enable pulse |
 
 ### DEBOUNCE <br>
-
+Modul úspešne identifikuje a odstraňuje krátke zákmity napríklad v signáli btnc_in, pričom na výstup btnc_state prepúšťa len stabilné stlačenia bez šumu.
+Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály z viacerých tlačidiel súčasne, čím zaisťuje stabilné ovládanie rôznych funkcií systému.
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
 | clk | in | std_logic | Main clock |
@@ -42,9 +43,6 @@ Inicializácia git + Vivado, Úprava README.md, editácia demo videa, programova
 | btnu_state | out | std_logic | Debounced state of up button |
 | btnd_state | out | std_logic | Debounced state of down button |
 
-Modul úspešne identifikuje a odstraňuje krátke zákmity napríklad v signáli btnc_in, pričom na výstup btnc_state prepúšťa len stabilné stlačenia bez šumu.
-Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály z viacerých tlačidiel súčasne, čím zaisťuje stabilné ovládanie rôznych funkcií systému.
-
 <img width="1252" height="700" alt="debounce-opravene" src="https://github.com/user-attachments/assets/0a643eaa-0bc1-4240-b58b-00dc867929b0" />
 
 
@@ -54,6 +52,8 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 
 
 ### CONTROLLER <br>
+
+Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vstupov generuje cieľové hodnoty pre jednotlivé farebné zložky RGB mood lampy. Blok spracováva požiadavky na zmenu módu, jasu a rýchlosti efektov. Simulačné priebehy zobrazujú schopnosť bloku prepínať medzi definovanými farbami (Red, Green, Blue, Yellow, Cyan, Magenta) a plynule prechádzať do automatického módu, pričom je zachovaná presná synchronizácia všetkých troch farebných kanálov.
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -67,8 +67,6 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 | target_g | out | std_logic_vector(7 downto 0) | Target value for green component |
 | target_b | out | std_logic_vector(7 downto 0) | Target value for blue component |
 
-Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vstupov generuje cieľové hodnoty pre jednotlivé farebné zložky RGB mood lampy. Blok spracováva požiadavky na zmenu módu, jasu a rýchlosti efektov. Simulačné priebehy zobrazujú schopnosť bloku prepínať medzi definovanými farbami (Red, Green, Blue, Yellow, Cyan, Magenta) a plynule prechádzať do automatického módu, pričom je zachovaná presná synchronizácia všetkých troch farebných kanálov.
-
 <img width="1167" height="695" alt="controller-opravene " src="https://github.com/user-attachments/assets/608a3e7e-e924-402a-abb2-38a9f0d42b54" />
 
 <br>
@@ -76,6 +74,8 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 [![Controller Test Bench](https://img.shields.io/badge/Controller-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/controller_tb.vhd)
 
 ###  SMOOTHING <br>
+
+Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prechody mezi farbami RGB mood lampy. Zabraňuje rušivým skokovým zmenám jasu tým, že postupne aproximuje aktuálnu hodnotu k hodnote cieľovej. Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály pre všetky tri farebné zložky súčasne, čím zaisťuje plynulé miešanie výsledného farebného spektra.
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -89,8 +89,6 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 | current_g | out | std_logic_vector(7 downto 0) | Current smoothed green value |
 | current_b | out | std_logic_vector(7 downto 0) | Current smoothed blue value |
 
-Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prechody mezi farbami RGB mood lampy. Zabraňuje rušivým skokovým zmenám jasu tým, že postupne aproximuje aktuálnu hodnotu k hodnote cieľovej. Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať signály pre všetky tri farebné zložky súčasne, čím zaisťuje plynulé miešanie výsledného farebného spektra.
-
 <img width="1159" height="697" alt="smoothing-opravene" src="https://github.com/user-attachments/assets/1e3246fe-6c09-4880-80e5-78ae4f1e4cef" />
 
 <br>
@@ -99,14 +97,14 @@ Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prec
 
 ### PWM <br>
 
+PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitálnu hodnotu jasu na časovo modulovaný výstupný signál. Spravuje šírku impulzu na výstupe pwm_out v rámci každej periódy na základe porovnávania vnútorného čítača so vstupnou hodnotou duty_cycle. Z výsledkov simulácie vidíme, že modul stíha ovládať všetky tri farby (červenú, zelenú aj modrú) naraz a nezávisle od seba. Vďaka tomu, že toto prepínanie prebieha obrovskou rýchlosťou, oko nevidí žiadne blikanie, ale len namiešanú a stabilnú farbu.
+
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
 | clk | in | std_logic | Main clock |
 | rst | in | std_logic | High-active synchronous reset |
 | duty_cycle | in | std_logic_vector(7 downto 0) | Input intensity (0 to 255) |
 | pwm_out | out | std_logic | PWM output signal for LED |
-
-PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitálnu hodnotu jasu na časovo modulovaný výstupný signál. Spravuje šírku impulzu na výstupe pwm_out v rámci každej periódy na základe porovnávania vnútorného čítača so vstupnou hodnotou duty_cycle. Z výsledkov simulácie vidíme, že modul stíha ovládať všetky tri farby (červenú, zelenú aj modrú) naraz a nezávisle od seba. Vďaka tomu, že toto prepínanie prebieha obrovskou rýchlosťou, oko nevidí žiadne blikanie, ale len namiešanú a stabilnú farbu.
 
 <img width="1251" height="698" alt="pwm-opravene " src="https://github.com/user-attachments/assets/891e7a4b-9d13-4946-8f4b-9bc9734cea11" />
 
@@ -115,6 +113,8 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 [![PWM Test Bench](https://img.shields.io/badge/PWM-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/pwm_tb.vhd)
 
 ### RGB MOOD LAMP  <br>
+
+Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simulácia nám ukázala, že tento modul úspešne koordinuje prácu všetkých vnútorných blokov naraz. Vďaka tomu lampa okamžite reaguje na stlačenie tlačidla a dokáže plynule meniť farby a jas.
 
 | Port name | Direction | Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -126,8 +126,6 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 | LED16_r | out | std_logic | Red LED output |
 | LED16_g | out | std_logic | Green LED output |
 | LED16_b | out | std_logic | Blue LED output |
-
-Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simulácia nám ukázala, že tento modul úspešne koordinuje prácu všetkých vnútorných blokov naraz. Vďaka tomu lampa okamžite reaguje na stlačenie tlačidla a dokáže plynule meniť farby a jas.
 
 <img width="1336" height="696" alt="top_level-opravene2" src="https://github.com/user-attachments/assets/02445429-69c3-4511-90b1-9693c963600a" />
 
