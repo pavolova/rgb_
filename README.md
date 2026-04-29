@@ -12,7 +12,7 @@ Navrhnúť a implementovať RGB Mood Lamp na FPGA (Nexys A7-50T), ktorá umožň
 
 ## Rozdelenie rolí
 ### - Miroslav Kaštier (272835) <br>
-Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce, controller
+Inicializácia git + Vivado, Úprava README.md, Editácia demo videa, programovanie častí: debounce, controller
 ### - Viktória Pavolová (270987) <br>
 Úprava README.md, návrh architektúry, tvorba plagátu, programovanie častí: smoothing, PWM, rgb_mood_lamp_top, clk_en, controller
 
