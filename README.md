@@ -71,6 +71,7 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 <br>
 
 [![Controller Test Bench](https://img.shields.io/badge/Controller-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/controller_tb.vhd)
+[![Controller Design](https://img.shields.io/badge/Controller-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/controller.vhd)
 
 ###  SMOOTHING <br>
 
@@ -93,6 +94,7 @@ Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prec
 <br>
 
 [![Smoothing Test Bench](https://img.shields.io/badge/Smoothing-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/smoothing_tb.vhd)
+[![Smoothing Design](https://img.shields.io/badge/Smoothing-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/smoothing.vhd)
 
 ### PWM <br>
 
@@ -110,6 +112,7 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 <br>
 
 [![PWM Test Bench](https://img.shields.io/badge/PWM-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/pwm_tb.vhd)
+[![PWM Design](https://img.shields.io/badge/PWM-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/pwm.vhd)
 
 ### RGB MOOD LAMP  <br>
 
@@ -132,6 +135,7 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 <br>
 
 [![RGB Test Bench](https://img.shields.io/badge/RGB-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd)
+[![RGB Design](https://img.shields.io/badge/RGB-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp.vhd)
 
 ## Lab 4
 
