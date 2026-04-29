@@ -47,6 +47,7 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 <br>
 
 [![Debounce Test Bench](https://img.shields.io/badge/Debounce-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/debounce_tb.vhd)
+[![Debounce Design](https://img.shields.io/badge/Debounce-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/debounce.vhd)
 
 
 ### CONTROLLER <br>
