@@ -16,10 +16,8 @@ Inicializácia git + Vivado, Úprava README.md, editácia demo videa, programova
 ### - Viktória Pavolová (270987) <br>
 Úprava README.md, návrh architektúry, tvorba plagátu, programovanie častí: smoothing, PWM, rgb_mood_lamp_top, clk_en, controller
 
-## Lab 1
+### TOP LEVEL SCHÉMA
 <img width="1505" height="781" alt="top_level_schematic drawio (1)" src="https://github.com/user-attachments/assets/80f2e0b1-1e64-4d0d-ba08-1c9d4fd60c59" />
-
-## Lab 2 & 3
 
 ### CLK_EN <br>
 
