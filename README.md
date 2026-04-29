@@ -16,7 +16,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 ### - Viktória Pavolová (270987) <br>
 Úprava README.md, návrh architektúry, tvorba plagátu, programovanie častí: smoothing, PWM, rgb_mood_lamp_top, clk_en, controller
 
-## Architecture
+## Lab 1
 <img width="1505" height="781" alt="top_level_schematic drawio (1)" src="https://github.com/user-attachments/assets/80f2e0b1-1e64-4d0d-ba08-1c9d4fd60c59" />
 
 
@@ -93,7 +93,7 @@ Inicializácia git + Vivado, Úprava README.md, programovanie častí: debounce,
 | duty_cycle | in | std_logic_vector(7 downto 0) | Input intensity (0 to 255) |
 | pwm_out | out | std_logic | PWM output signal for LED |
 
-## Unit design
+## Lab 2 & 3
 
 ### DEBOUNCE <br>
 
@@ -148,6 +148,8 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 <br>
 
 [![RGB Test Bench](https://img.shields.io/badge/RGB-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd)
+
+## Lab 4
 
 ## Demo video
 
