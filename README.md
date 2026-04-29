@@ -154,7 +154,8 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 ## Lab 4: Tuning
 
 ## Lab 5: Defense
-Demo video: 
+### - Demo video
+### - Plagát
 
 ## Referencie
 
