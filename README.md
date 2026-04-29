@@ -65,7 +65,7 @@ Slúži ako riadiaca jednotka systému, ktorá na základe užívateľských vst
 | target_g | out | std_logic_vector(7 downto 0) | Target value for green component |
 | target_b | out | std_logic_vector(7 downto 0) | Target value for blue component |
 
-<img width="1200" height="700" alt="controller-opr" src="https://github.com/user-attachments/assets/9393199c-0f7a-4368-b6be-ea51f8f20a02" />
+<img width="1300" height="900" alt="controller-opr" src="https://github.com/user-attachments/assets/9393199c-0f7a-4368-b6be-ea51f8f20a02" />
 
 
 <br>
