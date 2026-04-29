@@ -41,7 +41,7 @@ Priebehy potvrdzujú, že blok dokáže paralelne a nezávisle spracovávať sig
 | btnu_state | out | std_logic | Debounced state of up button |
 | btnd_state | out | std_logic | Debounced state of down button |
 
-<img width="1300" height="600" alt="debounce-opr" src="https://github.com/user-attachments/assets/81176f5d-566e-40f1-8773-7eb7d6bf0ed6" />
+<img width="1300" height="650" alt="debounce-opr" src="https://github.com/user-attachments/assets/81176f5d-566e-40f1-8773-7eb7d6bf0ed6" />
 
 <br>
 
