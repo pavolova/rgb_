@@ -88,8 +88,7 @@ Tento modul plní funkciu vyhlazovacieho členu, ktorý zaišťuje plynulé prec
 | current_g | out | std_logic_vector(7 downto 0) | Current smoothed green value |
 | current_b | out | std_logic_vector(7 downto 0) | Current smoothed blue value |
 
-<img width="1250" height="650" alt="smoothing-opr" src="https://github.com/user-attachments/assets/11de4f27-4ce2-4f6a-a03a-03f3b1eb353a" />
-
+<img width="1159" height="697" alt="smoothing" src="https://github.com/user-attachments/assets/951e6c2d-1d4b-444c-923a-d4d277d47374" />
 
 <br>
 
