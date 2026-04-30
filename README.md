@@ -141,6 +141,8 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 
 ## Demo video
 
+https://github.com/user-attachments/assets/5fcb01e3-3c5e-4a47-b53d-406dd48951d7
+
 ## Plagát
 
 ## Referencie
