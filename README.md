@@ -106,7 +106,7 @@ PWM modul slúži ako riadený generátor striedy, ktorý transformuje digitáln
 | duty_cycle | in | std_logic_vector(7 downto 0) | Input intensity (0 to 255) |
 | pwm_out | out | std_logic | PWM output signal for LED |
 
-<img width="1200" height="650" alt="pwm-opr" src="https://github.com/user-attachments/assets/fcdb53d0-2069-41ff-9538-bf9692691d16" />
+<img width="1200" height="660" alt="pwm-opr" src="https://github.com/user-attachments/assets/fcdb53d0-2069-41ff-9538-bf9692691d16" />
 
 <br>
 
