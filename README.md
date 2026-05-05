@@ -128,7 +128,7 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 | LED16_g | out | std_logic | Green LED output |
 | LED16_b | out | std_logic | Blue LED output |
 
-<img width="1200" height="700" alt="top_level-opr" src="https://github.com/user-attachments/assets/e807b9e6-f289-4617-bdb7-177329fc1709" />
+<img width="1200" height="650" alt="top_level-opr" src="https://github.com/user-attachments/assets/e807b9e6-f289-4617-bdb7-177329fc1709" />
 
 <br>
 
