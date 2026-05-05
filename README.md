@@ -144,7 +144,7 @@ https://github.com/user-attachments/assets/41fc6953-3d0a-47d6-86ad-2c0230d4219d
 ## Plagát
 
 <details>
-<summary>🖼️ Plagát – RGB Mood Lamp</summary>
+<summary> 🔴🟢🔵 Plagát – RGB Mood Lamp</summary>
 
 ![Plagát](img/plagát.png)
 
