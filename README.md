@@ -150,7 +150,6 @@ https://github.com/user-attachments/assets/41fc6953-3d0a-47d6-86ad-2c0230d4219d
 
 </details>
 
-## Referencie
 
 
 
