@@ -147,6 +147,15 @@ https://github.com/user-attachments/assets/41fc6953-3d0a-47d6-86ad-2c0230d4219d
 
 ## Plagát
 
+### Plagát
+
+<details>
+<summary>📄 Zobraziť plagát</summary>
+
+![Plagát](img/plagát.png)
+
+</details>
+
 [![Preview](img/plagát.png)](img/plagát.png)
 
 ## Referencie
