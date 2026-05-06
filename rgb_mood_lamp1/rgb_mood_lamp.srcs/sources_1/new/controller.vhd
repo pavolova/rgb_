@@ -18,10 +18,11 @@ end controller;
 
 architecture Behavioral of controller is
 
-        signal r_reg : unsigned(7 downto 0);
-        signal g_reg : unsigned(7 downto 0);
-        signal b_reg : unsigned(7 downto 0);
-        signal cnt : unsigned(7 downto 0);
+        signal r_reg : unsigned(7 downto 0) := (others => '0');
+        signal g_reg : unsigned(7 downto 0) := (others => '0');
+        signal b_reg : unsigned(7 downto 0) := (others => '0');
+        signal cnt   : unsigned(7 downto 0) := (others => '0');
+        signal phase : unsigned(2 downto 0) := (others => '0');
         
         signal bright_reg : unsigned(7 downto 0) := x"FF"; 
         signal speed_reg  : unsigned(7 downto 0) := x"05"; 
@@ -35,6 +36,7 @@ process(clk)
                 g_reg <= (others => '0');
                 b_reg <= (others => '0');
                 cnt   <= (others => '0');
+                phase <= (others => '0');
                 bright_reg <= x"FF";
                 speed_reg  <= x"05";
 
@@ -89,31 +91,56 @@ process(clk)
 
                    -- AUTO FADE
                     when others =>
-                    
                         cnt <= cnt + speed_reg;
                     
-                        case cnt(7 downto 6) is
-                            when "00" =>
+                        if cnt + speed_reg < cnt then
+                            if phase = 5 then
+                                phase <= (others => '0');
+                            else
+                                phase <= phase + 1;
+                            end if;
+                        end if;
+                    
+                        case phase is
+                    
+                            -- RED -> YELLOW
+                            when "000" =>
                                 r_reg <= bright_reg;
-                                g_reg <= cnt(5 downto 0) & "00";
+                                g_reg <= cnt;
                                 b_reg <= (others => '0');
                     
-                            when "01" =>
-                                r_reg <= not (cnt(5 downto 0) & "00");
+                            -- YELLOW -> GREEN
+                            when "001" =>
+                                r_reg <= not cnt;
                                 g_reg <= bright_reg;
                                 b_reg <= (others => '0');
                     
-                            when "10" =>
+                            -- GREEN -> CYAN
+                            when "010" =>
                                 r_reg <= (others => '0');
                                 g_reg <= bright_reg;
-                                b_reg <= cnt(5 downto 0) & "00";
+                                b_reg <= cnt;
                     
-                            when others =>
-                                r_reg <= cnt(5 downto 0) & "00";
+                            -- CYAN -> BLUE
+                            when "011" =>
+                                r_reg <= (others => '0');
+                                g_reg <= not cnt;
+                                b_reg <= bright_reg;
+                    
+                            -- BLUE -> MAGENTA
+                            when "100" =>
+                                r_reg <= cnt;
                                 g_reg <= (others => '0');
                                 b_reg <= bright_reg;
+                    
+                            -- MAGENTA -> RED
+                            when others =>
+                                r_reg <= bright_reg;
+                                g_reg <= (others => '0');
+                                b_reg <= not cnt;
+                    
                         end case;
-                        
+                                            
                     end case;
                 end if;
              end if;
