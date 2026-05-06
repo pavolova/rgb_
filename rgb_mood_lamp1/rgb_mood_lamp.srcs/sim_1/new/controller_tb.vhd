@@ -106,7 +106,7 @@ begin
     
         -- 111 AUTO FADE
         mode <= "111";
-        wait for 500 ns; 
+        wait for 50 us; 
     
         -- ***EDIT*** Add stimuli here
         wait for 100 * TbPeriod;
