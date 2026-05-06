@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/d0540332-32ff-4994-9bce-3937b8bbb474
-
 # RGB Mood Lamp 
 ## Členovia tímu
 Miroslav Kaštier (272835) <br>
