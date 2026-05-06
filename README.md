@@ -143,6 +143,9 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 | FF (Flip-Flop) | 147 | 65 200 | 0,23 |
 | IO (Input/Output) | 8 | 210 | 3,81 |
 
+<img width="249" height="66" alt="graph" src="https://github.com/user-attachments/assets/d165a89c-f337-411e-8e38-14995cfa6d76" />
+
+
 ## Demo video
 
 https://github.com/user-attachments/assets/f98b7ce8-6a0a-46e4-9b89-3076555a8b12
