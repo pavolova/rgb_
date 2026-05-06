@@ -83,32 +83,32 @@ begin
 
 
     -- RED
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     -- GREEN
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     -- BLUE
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     -- YELLOW
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     -- CYAN
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     -- MAGENTA
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     -- AUTO FADE
-    btnc <= '1'; wait for 5 ms;
-    btnc <= '0'; wait for 10 ms;
+    btnc <= '1'; wait for 200 ns;
+    btnc <= '0'; wait for 1 us;
 
     TbSimEnded <= '1';
     wait;
