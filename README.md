@@ -149,6 +149,7 @@ https://github.com/user-attachments/assets/f98b7ce8-6a0a-46e4-9b89-3076555a8b12
 ![Plagát](img/plagát.png)
 
 </details>
+
 ## Použité nástroje
 - Xilinx Vivado: Vivado sme použili na návrh projektu, syntézu, simuláciu a implementáciu na dosku Nexys A7-50T 
 - GitHub: Implementácia celého kódu na platformu
