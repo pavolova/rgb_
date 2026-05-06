@@ -83,6 +83,7 @@ begin
                     end if;
 
                     shift_reg_u <= shift_reg_u(C_SHIFT_LEN-2 downto 0) & sync1_u;
+                    
                     if shift_reg_u = (shift_reg_u'range => '1') then
                         debounced_u <= '1';
                     elsif shift_reg_u = (shift_reg_u'range => '0') then
@@ -90,6 +91,7 @@ begin
                     end if;
 
                     shift_reg_d <= shift_reg_d(C_SHIFT_LEN-2 downto 0) & sync1_d;
+                    
                     if shift_reg_d = (shift_reg_d'range => '1') then
                         debounced_d <= '1';
                     elsif shift_reg_d = (shift_reg_d'range => '0') then
