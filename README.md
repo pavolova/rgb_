@@ -160,10 +160,10 @@ https://github.com/user-attachments/assets/f98b7ce8-6a0a-46e4-9b89-3076555a8b12
 </details>
 
 ## Použité nástroje
-- Xilinx Vivado: Vivado sme použili na návrh projektu, syntézu, simuláciu a implementáciu na dosku Nexys A7-50T 
+- Xilinx Vivado: Návrh projektu, syntéza, simulácia a implementácia na dosku Nexys A7-50T 
 - GitHub: Implementácia celého kódu na platformu
 - VSCode: Prepojenie súborov s GitHubom
-- DrawIO: Návrh architektúry
+- Draw.io: Návrh architektúry
 - Canva: Editácia videa, tvorba plagátu
 - Gemini AI: Odstránenie chýb v projekte
 
