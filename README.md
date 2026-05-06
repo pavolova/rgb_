@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/d0540332-32ff-4994-9bce-3937b8bbb474
+
 # RGB Mood Lamp 
 ## Členovia tímu
 Miroslav Kaštier (272835) <br>
@@ -139,7 +143,7 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 
 ## Demo video
 
-https://github.com/user-attachments/assets/41fc6953-3d0a-47d6-86ad-2c0230d4219d
+https://github.com/user-attachments/assets/f98b7ce8-6a0a-46e4-9b89-3076555a8b12
 
 ## Plagát
 
