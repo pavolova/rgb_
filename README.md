@@ -149,7 +149,18 @@ https://github.com/user-attachments/assets/f98b7ce8-6a0a-46e4-9b89-3076555a8b12
 ![Plagát](img/plagát.png)
 
 </details>
+## Použité nástroje
+- Xilinx Vivado: Vivado sme použili na návrh projektu, syntézu, simuláciu a implementáciu na dosku Nexys A7-50T 
+- GitHub: Implementácia celého kódu na platformu
+- VSCode: Prepojenie súborov s GitHubom
+- DrawIO: Návrh architektúry
+- Canva: Editácia videa, tvorba plagátu
+- Gemini AI: Odstránenie chýb v projekte
 
+## Referencie
+1. VHDL materiály: https://github.com/tomas-fryza/vhdl-examples
+2. Nexys A7 Reference Manuál: https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual
+3. Nexys A7 Master XDC constrains file: https://github.com/Digilent/digilent-xdc
 
 
 
