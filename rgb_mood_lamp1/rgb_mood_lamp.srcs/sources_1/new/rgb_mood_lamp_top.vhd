@@ -18,7 +18,7 @@ architecture Behavioral of rgb_mood_lamp_top is
      
     -- Component declaration for clock enable
     component clk_en is
-        generic ( N_PERIODS : integer );
+        generic ( N_PERIODS : positive );
         port (
             clk   : in    std_logic;
             btnl   : in    std_logic;
@@ -143,12 +143,12 @@ begin
                 btnu_prev <= btnu_db;
                 btnd_prev <= btnd_db;
 
-                -- BTN C: prepína režim 0 až 7
+                -- BTN C: change mood  0 - 7
                 if btnc_db = '1' and btnc_prev = '0' then
                     sig_mode <= std_logic_vector(unsigned(sig_mode) + 1);
                 end if;
 
-                -- BTN U: prepína jas
+                -- BTN U: change bright
                 if btnu_db = '1' and btnu_prev = '0' then
                     case sig_bright is
                         when x"40" =>
@@ -162,7 +162,7 @@ begin
                     end case;
                 end if;
 
-                -- BTN D: prepína rýchlosť
+                -- BTN D: change speed
                 if btnd_db = '1' and btnd_prev = '0' then
                     case sig_speed is
                         when x"01" =>
