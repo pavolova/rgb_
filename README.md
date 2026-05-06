@@ -136,8 +136,8 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 [![RGB Design](https://img.shields.io/badge/RGB-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp.vhd)
 
 ## Využitie zdrojov
-
-| Zdroj | Využitie | Dostupné | Využitie v % |
+Výsledky po syntéze z dosky Nexys A7-50T
+| Zdroj | Využitie | K dispozícii | Využitie v % |
 | :--- | :--- | :--- | :--- |
 | LUT (Look-Up-Table) | 149 | 32 600 | 0,46 |
 | FF (Flip-Flop) | 147 | 65 200 | 0,23 |
