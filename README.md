@@ -161,11 +161,11 @@ https://github.com/user-attachments/assets/f98b7ce8-6a0a-46e4-9b89-3076555a8b12
 
 ## Použité nástroje
 - Xilinx Vivado: návrh projektu, syntéza, simulácia a implementácia na FPGA dosku Nexys A7-50T
-- GitHub: Implementácia celého kódu na platformu
+- GitHub: implementácia celého kódu na platformu
 - VSCode: prepojenie súborov s GitHubom
 - Draw.io: návrh blokovej architektúry systému
 - Canva: tvorba plagátu a editácia videa
-- Gemini AI: Odstránenie chýb v projekte
+- Gemini AI: pomoc pri odstraňovaní chýb v projekte
 
 ## Referencie
 1. VHDL materiály: https://github.com/tomas-fryza/vhdl-examples
