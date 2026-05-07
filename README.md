@@ -133,7 +133,7 @@ Modul spája všetky časti RGM mood lampy do jedného fungujúceho celku. Simul
 <br>
 
 [![RGB Test Bench](https://img.shields.io/badge/RGB-TestBench-blue)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sim_1/new/rgb_mood_lamp_tb.vhd)
-[![RGB Design](https://img.shields.io/badge/RGB-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp.vhd)
+[![RGB Design](https://img.shields.io/badge/RGB-Design-red)](https://github.com/pavolova/rgb_/blob/main/rgb_mood_lamp1/rgb_mood_lamp.srcs/sources_1/new/rgb_mood_lamp_top.vhd)
 
 ## Využitie zdrojov
 Výsledky po syntéze z dosky Nexys A7-50T
